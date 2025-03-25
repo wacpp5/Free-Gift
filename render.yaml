@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: free-gift-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: SHOPIFY_STORE_DOMAIN
+        sync: false
+      - key: SHOPIFY_ACCESS_TOKEN
+        sync: false
+      - key: FREE_GIFT_COLLECTION_HANDLE
+        sync: false
+      - key: FREE_GIFT_THRESHOLD
+        sync: false
